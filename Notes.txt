@@ -1,0 +1,3 @@
+- In App.js 
+    - for bootstrap classname is used to make changes such as text-center and ubuntu for the font
+    - my is margin so my-4 is margin

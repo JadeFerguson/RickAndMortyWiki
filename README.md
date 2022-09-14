@@ -13,6 +13,7 @@ The topics covered in the tutorial are:
 
 Useful links:
 - [React Project packages install steps](https://github.com/JoyShaheb/React-Projects/tree/main/Level-1/rick-morty-wiki)
+-[Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
 Useful extensions for Visual Studio:
 - Install ES7 React/Redux/GraphQL/React-Native Snippets by rodrigovallades

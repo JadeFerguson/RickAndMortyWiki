@@ -12,8 +12,8 @@ The topics covered in the tutorial are:
 - Dynamic Routing
 
 Useful links:
-[React Project packages install steps](https://github.com/JoyShaheb/React-Projects/tree/main/Level-1/rick-morty-wiki)
+- [React Project packages install steps](https://github.com/JoyShaheb/React-Projects/tree/main/Level-1/rick-morty-wiki)
 
 Useful entensions for Visual Studio:
-Install ES7 React/Redux/GraphQL/React-Native Snippets by rodrigovallades
-Install ESLint by Microsoft
+- Install ES7 React/Redux/GraphQL/React-Native Snippets by rodrigovallades
+- Install ESLint by Microsoft

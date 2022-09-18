@@ -6,6 +6,6 @@ const Cards = () => {
       Cards
     </div>
   )
-}
+};
 
 export default Cards

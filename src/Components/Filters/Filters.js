@@ -8,6 +8,6 @@ const Filters = () => {
       Filters
     </div>
   )
-}
+};
 
 export default Filters

@@ -5,11 +5,13 @@ import "bootstrap/dist/js/bootstrap";
 import Cards from "./Components/Cards/Cards";
 import Filters from "./Components/Filters/Filters";
 import Pagination from './Components/Pagination/Pagination';
+import Search from './Components/Search/Search';
 
 function App() {
   //   variable      function               default value
   // and use this to bind to numbers for pagination     
   let [pageNumber, setPageNumber] = useState(1);
+  let [search, setSearch] = useState("")
 
   let [fetchedData, updateFetchedData] = useState([]);
 
@@ -18,7 +20,7 @@ function App() {
 
   // cant use double quotes or we cant use variables in here
   // use a template literal using backtics
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 
   // To actually fill with data you have to use a useEffect Hook
   // Whenever API changes we want to fetch it below
@@ -37,6 +39,8 @@ function App() {
       <h1 className="text-center fw-bold ubuntu my-4">
         Rick & Morty <span className="text-primary">WiKi</span>
       </h1>
+
+      <Search setPageNumber={setPageNumber} setSearch={setSearch} ></Search>
 
       <div className="container">
         <div className="row">

@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Cards from "./Components/Cards/Cards";
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center ubuntu my-4">
+      <h1 className="text-center fw-bold ubuntu my-4">
         Rick & Morty <span className="text-primary">WiKi</span>
       </h1>
 

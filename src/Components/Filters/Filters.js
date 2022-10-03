@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // raface is a short cut for below, did this because we installed ES7
 // react extension

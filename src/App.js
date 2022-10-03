@@ -13,13 +13,12 @@ function App() {
   let [fetchedData, updateFetchedData] = useState([]);
   let {info, results} = fetchedData;
 
-  console.log(results);
   // cant use double quotes or we cant use variables in here
   // use a template literal using backtics
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
   // To actually fill with data you have to use a useEffect Hook
-  // Whenevr API changes we want to fetch it below
+  // Whenever API changes we want to fetch it below
   useEffect(()=>{
     // async function to fetch data from api
     // IIFE JS is a function that runs as soon as it is defined so we do not have
@@ -43,7 +42,7 @@ function App() {
           </div>  
           <div className="col-8">
             <div className="row">
-              <Cards></Cards>
+              <Cards results={results}></Cards>
             </div>
           </div>
         </div>

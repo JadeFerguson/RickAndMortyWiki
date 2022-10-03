@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Cards from "./Components/Cards/Cards";
 import Filters from "./Components/Filters/Filters";
+import Pagination from './Components/Pagination/Pagination';
 
 function App() {
   //   variable      function               default value
@@ -29,7 +30,7 @@ function App() {
       let data = await fetch(api).then(res=>res.json());
       updateFetchedData(data);
     })();
-  },[api]);
+  }, [api]);
 
   return (
     <div className="App">
@@ -49,6 +50,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}></Pagination>
     </div>
   );
 }

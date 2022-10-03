@@ -11,6 +11,8 @@ function App() {
   let [pageNumber, setPageNumber] = useState(1);
 
   let [fetchedData, updateFetchedData] = useState([]);
+
+  // This is called destructured 
   let {info, results} = fetchedData;
 
   // cant use double quotes or we cant use variables in here

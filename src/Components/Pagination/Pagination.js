@@ -18,7 +18,7 @@ const Pagination = ({info, pageNumber, setPageNumber}) => {
                 setPageNumber(data.selected + 1);
             }}
             pageCount={info?.pages}
-            ></ReactPaginate>
+        />
             
     );
 };

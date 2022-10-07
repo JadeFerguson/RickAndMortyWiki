@@ -1,22 +1,26 @@
 import React from 'react';
+import ReactPaginate from 'react-paginate';
 
 // Destructed pagination and made a function here
-const Pagination = ({pageNumber, setPageNumber}) => {
-    let next = () => {
-        // x represents the prev value which is number 1
-        // so doing x + 1 so update page from 1 to 2 and so on
-        setPageNumber(x => x + 1);
-    };
-    let prev = () => {
-        if(pageNumber === 1) return;
-        setPageNumber(x => x - 1);
-    };
-    return (
-        <div className="container d-flex justify-content-center gap-5 my-5">
-            <button onClick={prev} className="btn btn-primary">Prev</button>
-            <button onClick={next} className="btn btn-primary">Next</button>
-        </div>
+const Pagination = ({info, pageNumber, setPageNumber}) => {
+    return(
+        <ReactPaginate
+            className="pagination justify-content-center gap-4 my-4"
+            forcePage={pageNumber===1? 0 : pageNumber - 1}
+            nextLabel="Next"
+            previousLabel="Prev"
+            nextClassName="btn btn-primary"
+            previousClassName="btn btn-primary"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            activeClassName="active"
+            onPageChange={(data) => {
+                setPageNumber(data.selected + 1);
+            }}
+            pageCount={info?.pages}
+            ></ReactPaginate>
+            
     );
 };
 
-export default Pagination
+export default Pagination;

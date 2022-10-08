@@ -12,6 +12,9 @@ function App() {
   // and use this to bind to numbers for pagination     
   let [pageNumber, setPageNumber] = useState(1);
   let [search, setSearch] = useState("")
+  let [status, setStatus] = useState("")
+  let [gender, setGender] = useState("")
+  let [species, setSpecies] = useState("")
 
   let [fetchedData, updateFetchedData] = useState([]);
 
@@ -20,7 +23,7 @@ function App() {
 
   // cant use double quotes or we cant use variables in here
   // use a template literal using backtics
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   // To actually fill with data you have to use a useEffect Hook
   // Whenever API changes we want to fetch it below
@@ -44,9 +47,11 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            <Filters></Filters>
-          </div>  
+            <Filters 
+              setGender={setGender}
+              setStatus={setStatus}
+              setSpecies={setSpecies}
+              setPageNumber={setPageNumber}></Filters> 
           <div className="col-8">
             <div className="row">
               <Cards results={results}></Cards>

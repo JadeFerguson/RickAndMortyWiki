@@ -6,8 +6,29 @@ import Cards from "./Components/Cards/Cards";
 import Filters from "./Components/Filters/Filters";
 import Pagination from './Components/Pagination/Pagination';
 import Search from './Components/Search/Search';
+import Navbar from './Components/Navbar/Navbar';
 
-function App() {
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Episodes from './Pages/Episodes';
+import Location from './Pages/Location';
+
+function App(){
+  return(
+    <Router>
+      <div className="App">
+        <Navbar></Navbar>
+      </div>
+
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/episodes" element={<Episodes></Episodes>}></Route>
+        <Route path="/location" element={<Location></Location>}></Route>
+      </Routes>
+    </Router>
+  );
+};
+
+const Home = () => {
   //   variable      function               default value
   // and use this to bind to numbers for pagination     
   let [pageNumber, setPageNumber] = useState(1);
@@ -39,10 +60,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center fw-bold ubuntu my-4">
-        Rick & Morty <span className="text-primary">WiKi</span>
-      </h1>
-
       <Search setPageNumber={setPageNumber} setSearch={setSearch} ></Search>
 
       <div className="container">

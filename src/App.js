@@ -20,13 +20,13 @@ function App(){
       </div>
 
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/episodes" element={<Episodes></Episodes>}></Route>
         <Route path="/location" element={<Location></Location>}></Route>
       </Routes>
     </Router>
   );
-};
+}
 
 const Home = () => {
   //   variable      function               default value
@@ -84,6 +84,6 @@ const Home = () => {
       </Pagination>
     </div>
   );
-}
+};
 
 export default App;

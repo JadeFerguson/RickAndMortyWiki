@@ -37,7 +37,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <ul className="navbar-nav fs-5">
                         <li>
-                            <NavLink exact to="/" className="nav-link" activeClassName="active">Characters</NavLink>
+                            <NavLink to="/home" className="nav-link" activeClassName="active">Characters</NavLink>
                         </li>
                         <li>
                             <NavLink to="/episodes" className="nav-link">Episodes</NavLink>
